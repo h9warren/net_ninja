@@ -7,7 +7,7 @@ class App extends Component {
   state = {
     ninjas : [
       { name: 'Ryu', age: 30, belt: 'black', id: 1},
-      { name: 'Yoshi', age: 20, belt: 'green', id: 2},
+      { name: 'Yoshi', age: 21, belt: 'green', id: 2},
       { name: 'Crystal', age: 25, belt: 'pink', id: 3}
     ]
   }
@@ -25,6 +25,13 @@ class App extends Component {
     this.setState({
       ninjas: ninjas
     })
+  }
+  componentDidMount(){
+    console.log("comonenet mounted");
+  }
+  componentDidUpdate(prevProps, prevState){
+    console.log("componenet updated");
+    console.log(prevProps, prevState);
   }
   render() {
     return (
